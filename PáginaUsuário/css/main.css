@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 14px;
+}
+.v50_10 {
+  width: 411px;
+  height: 823px;
+  background: rgba(143,229,177,1);
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.v51_27 {
+  width: 348px;
+  height: 64px;
+  background: rgba(255,255,255,1);
+  opacity: 0.800000011920929;
+  position: absolute;
+  top: 443px;
+  left: 39px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+.v51_28 {
+  width: 114px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 19px;
+  left: 16px;
+  font-family: Roboto;
+  font-weight: Thin;
+  font-size: 27px;
+  opacity: 1;
+  text-align: center;
+}
+.v50_21 {
+  width: 124px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 401px;
+  left: 35px;
+  font-family: Roboto;
+  font-weight: Thin;
+  font-size: 27px;
+  opacity: 1;
+  text-align: center;
+}
+.v50_24 {
+  width: 348px;
+  height: 64px;
+  background: rgba(255,255,255,1);
+  opacity: 0.800000011920929;
+  position: absolute;
+  top: 297px;
+  left: 39px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+.v50_25 {
+  width: 190px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 19px;
+  left: 16px;
+  font-family: Roboto;
+  font-weight: Thin;
+  font-size: 27px;
+  opacity: 1;
+  text-align: center;
+}
+.v50_22 {
+  width: 81px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 247px;
+  left: 41px;
+  font-family: Roboto;
+  font-weight: Thin;
+  font-size: 27px;
+  opacity: 1;
+  text-align: center;
+}
+.v50_17 {
+  width: 198px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 93px;
+  left: 202px;
+  font-family: Roboto;
+  font-weight: Thin;
+  font-size: 23px;
+  opacity: 1;
+  text-align: center;
+}
+.v50_16 {
+  width: 156px;
+  height: 158px;
+  background: rgba(45,69,155,1);
+  opacity: 1;
+  position: absolute;
+  top: 35px;
+  left: 24px;
+  border-radius: 50%;
+}
+.name {
+  color: #fff;
+}
