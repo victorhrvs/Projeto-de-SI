@@ -1,1 +1,107 @@
-<!DOCTYPE html><html><head><link href="./css/main.css" rel="stylesheet" /><title>Document</title><link href="./css/main.css" rel="stylesheet" /><title>Document</title></head><body><div class="v67_30"><div class="name"></div><div class="name"></div><div class="name"></div><div class="name"></div><div class="v67_119"></div><div class="v70_182"><div class="v70_176"></div><div class="v70_181"><div class="v70_177"></div><div class="v70_180"></div></div></div></div></body></html>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="./css/main.css" rel="stylesheet" />
+    <title>Document</title>
+    <link href="./css/main.css" rel="stylesheet" />
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <div class="v67_30">
+        <div class="name"></div>
+        <div class="name"></div>
+        <div class="name"></div>
+        <div class="name"></div>
+        <div class="v67_119" id="chart"></div>
+        <div class="v70_182">
+            <div class="v70_176"></div>
+            <div class="v70_181">
+                <div class="v70_177"></div>
+                <div class="v70_180"></div>
+            </div>
+        </div>
+        <form name="form_de_gastos">
+
+            <label for="rendaDaFamilia">Renda da Família</label>
+            <input type="number" id="rendaDaFamilia" />
+
+            <label for="salario">Salário</label>
+            <input type="number" id="salario" />
+
+            <label for="rendaVariavel">Receita Variável</label>
+            <input type="number" id="rendaVariavel" />
+
+            <input type="button" class="Atualizar" onclick="atualizar()" value="Atualizar" />
+        </form>
+    </div>
+
+
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+    
+        function atualizar() {
+            let rf = document.getElementById('rendaDaFamilia').value
+            let s = document.getElementById('salario').value
+            let rv = document.getElementById('rendaVariavel').value
+            window.location.href = 'index.html' + "?rf="+ String(rf) + "&s=" + String(s) + "&rv=" + String(rv);
+        }
+
+        google.charts.load('current', { packages: ['corechart'] })
+        google.charts.setOnLoadCallback(drawChart)
+
+        function drawChart() {
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            const rf = urlParams.get('rf')
+            const s = urlParams.get('s')
+            const rv = urlParams.get('rv')
+
+            document.getElementById("rendaDaFamilia").value = rf
+            document.getElementById("salario").value = s
+            document.getElementById("rendaVariavel").value = rv
+
+            const container = document.querySelector('#chart')
+            const data = new google.visualization.arrayToDataTable([
+                ['Opção', 'Quantia'],
+                ['Renda da Família', parseInt(rf)],
+                ['Salário', parseInt(s)],
+                ['Receita Variável', parseInt(rv)]
+            ])
+
+            const options = {
+                backgroundColor: "transparent",
+                pieHole: 0.5,
+                //title: 'Dragon Ball Z - Characters Ki',
+                tooltip: { text: 'value' },
+                legend: 'none',
+                width: 380,
+                pieSliceText: 'none',
+                pieStartAngle: 90,
+
+
+                slices: {
+                    0: { color: '#0EBF40' },
+                    1: { color: '#16A33D' },
+                    2: { color: '#0A802B' }
+                }
+            }
+
+            // const chart = new google.visualization.ColumnChart(container)
+            // const chart = new google.visualization.BarChart(container)
+            // const chart = new google.visualization.LineChart(container)
+            const chart = new google.visualization.PieChart(container)
+            chart.draw(data, options)
+        }
+
+
+    </script>
+</body>
+
+
+
+</html>
